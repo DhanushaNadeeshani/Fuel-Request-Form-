@@ -358,6 +358,13 @@
             <button class="btn btn-primary no-print" onclick="addPayableRow()">Add Order</button>
         </div>
 
+         <div class="form-section">
+    <div class="section-title">Remarks</div>
+    <div class="form-group">
+        <label for="remarks">Any Additional Information:</label>
+        <textarea id="remarks" name="remarks" rows="4" style="width: 100%; font-size: 10px; padding: 6px; border: 2px solid #ddd; border-radius: 4px;"></textarea>
+    </div>
+</div>
         <div class="form-section">
             <div class="form-row">
                 <div class="form-group">
@@ -720,6 +727,21 @@
                         yPos += 8;
                     }
                 });
+                 // Remarks Section
+const remarks = document.getElementById('remarks').value.trim();
+if (remarks) {
+    yPos += 10;
+    doc.setFontSize(10);
+    doc.setFont(undefined, 'bold');
+    doc.text('Remarks:', 20, yPos);
+    yPos += 6;
+    doc.setFont(undefined, 'normal');
+
+    // Wrap text
+    const splitRemarks = doc.splitTextToSize(remarks, 170); // max width 170
+    doc.text(splitRemarks, 20, yPos);
+    yPos += splitRemarks.length * 6;
+}
 
                 // Signatures
                 yPos += 20;
