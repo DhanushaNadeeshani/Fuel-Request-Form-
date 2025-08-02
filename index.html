@@ -297,20 +297,20 @@
                             <td>
                                 <select class="quantity" onchange="orderValueCalculate(); updateTotalStock(this);">
                                     <option value="">Select Quantity</option>
-                                    <option value="3300">3,300 L</option>
-                                    <option value="6600">6,600 L</option>
-                                    <option value="9900">9,900 L</option>
-                                    <option value="13200">13,200</option>
+                                    <option value="3300 L">3,300 L</option>
+                                    <option value="6600 L">6,600 L</option>
+                                    <option value="9900 L">9,900 L</option>
+                                    <option value="13200 L">13,200L</option>
                                 </select>
                             </td>
                             <td><input type="number" class="stock-hand" placeholder="0" onchange="updateTotalStock(this)"></td>
                             <td>
                                 <select class="stock-transit" onchange="updateTotalStock(this)">
                                     <option value="0">0</option>
-                                    <option value="3300">3,300</option>
-                                    <option value="6600">6,600</option>
-                                    <option value="9900">9,900</option>
-                                      <option value="13200">13,200</option>
+                                    <option value="3300 L">3,300</option>
+                                    <option value="6600 L">6,600</option>
+                                    <option value="9900 L">9,900</option>
+                                      <option value="13200 L">13,200</option>
                                 </select>
                             </td>
                             <td class="total-stock"></td>
@@ -668,9 +668,9 @@
                 doc.setFontSize(8);
                 doc.text('Fuel Type', 20, yPos);
                 doc.text('Order Qty', 50, yPos);
-                doc.text('Stock Hand', 80, yPos);
+                doc.text('Stock Hand(L)', 80, yPos);
                 doc.text('Stock Transit', 110, yPos);
-                doc.text('Total Stock', 140, yPos);
+                doc.text('Total Stock(L)', 140, yPos);
                 doc.line(20, yPos + 2, 190, yPos + 2);
                 yPos += 8;
 
@@ -768,4 +768,5 @@ if (remarks) {
     </script>
 </body>
 </html>
+
 
