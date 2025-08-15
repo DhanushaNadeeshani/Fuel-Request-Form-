@@ -420,7 +420,7 @@
             if (value.includes('-')) {
                 let parts = value.split('-');
                 parts[1] = parts[1].substring(0, 2); // Max 2 decimal places
-                value = parts[0] + '.' + parts[1];
+                value = parts[0] + '-' + parts[1];
             }
             
             // Add commas for thousands
@@ -769,6 +769,7 @@ if (remarks) {
     </script>
 </body>
 </html>
+
 
 
 
